@@ -5,7 +5,7 @@ $(function () {
 	
 
 
-	// $("ul").append('<li>banana</li>');
+	$("ul").append('<li style= "color: red">我是jq插进来的banana</li>');
 
 
 	$("#address").focus(function() {
@@ -22,6 +22,22 @@ $(function () {
 			$(this).val("please input name");
 	});
 
+	// cookie函数
+	var cookie_Name = 'username';
+	if($.cookie(cookie_Name)){
+		$("#username").val($.cookie(cookie_Name));
+	}
+
+
+
+	$("#check").click(function () {
+		if(this.checked){
+			$.cookie(cookie_Name,$("#username").val(),{ path : '/',expires : 10});
+		}
+		else{
+			$.cookie(cookie_Name,null,{ path :'/'});
+		}
+    });
 
 
 
@@ -31,6 +47,6 @@ $(function () {
 
 
 
-})
+});
 
 
