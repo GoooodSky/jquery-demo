@@ -22,13 +22,17 @@ li:hover{
 	font-size: 30px;
 }
 
-#address{
-	display: block;
-}
+/*input{
+	display: inline-block;
+}*/
 
 p{
 	/*vertical-align: 20px;*/
 	line-height: 50px;
 	word-spacing: 10px;
+}
+
+div{
+	margin: 30px;
 }
 
